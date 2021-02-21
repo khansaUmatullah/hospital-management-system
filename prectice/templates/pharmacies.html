@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+
+<head>
+    <style>
+        div.two{
+            background-color: rgb(0, 166, 255);
+        }
+    </style>
+</head>
+
+<div class="two">
+   
+    
+<table>
+    <tr>
+        <th>
+           medicine available     
+        </th>
+        
+        
+        
+    </tr>
+    {% for P in Phar%}
+    <tr>
+        
+        <td>
+           {{P.medicine_record}}
+        </td>
+       
+        
+
+    </tr>
+    {% endfor%}
+
+
+
+
+
+</table>
+    
+</div>
+
+    
+{% endblock %}

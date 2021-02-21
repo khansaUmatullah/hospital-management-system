@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+{% comment %}
+<head>
+    <style>
+        div.two{
+            background-color:rgb(0, 229, 255)
+        }
+    </style>
+</head>
+{% endcomment %}
+
+
+
+
+<body>
+   <div class="table table-striped">
+    
+<table>
+    <tr>
+        <th>
+           patients_age.....     
+        </th>
+        
+        <th>
+           patients_name.....
+        </th>
+      
+        <th>
+            Patients_Mobileno.....
+        </th>
+        <th>
+            patients_bloodgroup.....
+        </th>
+        <th>
+            patients_bill......
+        </th>
+        <th>
+            patients_bill_date
+        </th>
+        
+    </tr>
+    {% for P in Patient%}
+    <tr>
+        
+        <td>
+           {{P.age}}years
+        </td>
+        <td>
+            {{P.name}}
+        </td>
+        <td>
+            {{P.phoneno}}
+        </td>
+        <td>
+            {{P.b_group}}
+        </td>
+        <td>
+           Rs. {{P.Bill}}
+        </td>
+        <td>
+            {{P.bill_date}}
+        </td>
+
+        
+
+    </tr>
+    {% endfor%}
+
+
+
+
+
+</table>
+    
+   
+</div>
+</body>
+{% endblock %}

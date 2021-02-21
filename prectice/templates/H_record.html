@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<head>
+    <style>
+        div.two{
+            background-color: rgb(95, 148, 160);
+        }
+    </style>
+</head>
+
+
+<div class="two">
+   
+    
+<table>
+    <tr>
+        <th>
+            room no.......
+        </th>
+        <th>
+           rooms capacity......
+        </th>
+        <th>
+            room nurse.....
+        </th>
+        
+        
+        
+    </tr>
+    {% for R in Rooom%}
+    <tr>
+        <td>
+            {{R.id}}
+        </td>
+        <td>
+           {{R.capacity}}
+        </td>
+        <td>
+            {{R.Nurses}}
+
+        </td>
+       
+        
+
+    </tr>
+    {% endfor%}
+
+
+
+
+
+</table>
+<table>
+    <tr>
+        <th>
+            total no of beds.....
+        </th>
+        <th>
+            roomno...
+        </th>
+    </tr>
+    {%for F in Fur%}
+    <tr>
+        <td>
+            {{F.Noofbeds}}
+
+        </td>
+        <td>
+            {{F.Room}}
+        </td>
+    </tr>
+    {% endfor%}
+</table>
+    
+   
+</div>
+    
+{% endblock %}
